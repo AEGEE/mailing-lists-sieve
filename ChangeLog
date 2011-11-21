@@ -1,0 +1,9 @@
+20110923 src/uploaders/managesieve.c: The ManageSieve implementation supports explicit exclusion of some SASL mechanisms.  This exclusion code had bug.  Release 1.0.3
+
+20110718 src/uploaders/managesieve.c: When the ManageSieve server supports the UNAUTHENTICATE command, reuse the same TCP connection for all script uploads.
+
+20110220 src/uploaders/managesieve.c: printf used %i for size_t, changed to %zi (made problems on 64bit systems)
+
+20101122 src/generators/listserv.c: supported_lists () when Send = Public, do not consider the lists mentioned in the Send, Owner, Configuration-Owner, Editor and Moderator to determine on the subscribers of which lists this one depends
+
+20101115 Fixed memory leak

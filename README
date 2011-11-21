@@ -1,0 +1,5 @@
+This is mailing-lists-sieve: an utility to generate and upload sieve scripts for Listserv mailing lists, so that incoming mails that are subject for bouncing at a later time can be rejected during the SMTP dialog.
+
+The homepage of the project is http://mail.aegee.org/software/mailing-lists-sieve/ .
+
+The actual rejection can be done using aegee-milter : a sendmail/postfix plugin, that rejects mail during the SMTP phase based on Sieve rules. See http://mail.aegee.org/software/aegee-milter for details.

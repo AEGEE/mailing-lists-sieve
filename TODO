@@ -1,0 +1,12 @@
+== Core ==
+ Parse command line arguments
+   --show-list-names
+   --all-lists
+   --show-progress//--verbose
+   --stdout
+   --delete
+   --delay
+   --config-file
+   --help
+   --version
+ Proceed "capabilities" from the uploaders

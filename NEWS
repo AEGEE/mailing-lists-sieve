@@ -1,0 +1,5 @@
+20110718 Release mailing-lists-sieve 1.0.2
+
+New features
+  * when the ManageSieve server supports the  UNAUTHENTICATE command, the uploaded reuses the same TCP connection for all uploads.
+
