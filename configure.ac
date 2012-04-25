@@ -9,6 +9,7 @@ AC_CONFIG_SRCDIR([src/mailing-lists-sieve.c])
 AC_CONFIG_MACRO_DIR([m4])
 # Checks for programs.
 AC_PROG_CC
+AM_PROG_AR
 AM_PROG_CC_C_O
 AC_LIBTOOL_DLOPEN
 LT_INIT([disable-shared, dlopen])
