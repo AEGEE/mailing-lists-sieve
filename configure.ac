@@ -6,7 +6,7 @@ AC_INIT(mailing-lists-sieve, 1.0.3, mailing-lists-sieve@aegee.org)
 AM_INIT_AUTOMAKE([-Wall -Werror dist-bzip2 subdir-objects])
 AM_SILENT_RULES([yes])
 AC_CONFIG_SRCDIR([src/mailing-lists-sieve.c])
-AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_MACRO_DIRS([m4])
 # Checks for programs.
 AC_PROG_CC
 AM_PROG_AR

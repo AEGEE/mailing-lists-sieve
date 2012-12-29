@@ -1,5 +1,4 @@
 LIBTOOL_DEPS = @LIBTOOL_DEPS@
-ACLOCAL_AMFLAGS = -I m4
 AM_CPPFLAGS = -Isrc/ -DSYSCONFDIR='"${sysconfdir}"' ${glib_CFLAGS} ${liblistserv_CFLAGS} ${gsasl_CFLAGS}
 
 AM_CFLAGS = -Wall -Wextra
