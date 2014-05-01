@@ -6,7 +6,7 @@ AM_CFLAGS = -Wall -Wextra
 libtool: $(LIBTOOL_DEPS)
 	$(SHELL) ./config.status --recheck
 
-info_TEXINFOS			= doc/mailing-lists-sieve.texinfo
+info_TEXINFOS			= doc/mailing-lists-sieve.texi
 doc_mailing_lists_sieve_TEXINFOS	= doc/fdl-1.3.texi
 bin_PROGRAMS = src/mailing-lists-sieve
 
