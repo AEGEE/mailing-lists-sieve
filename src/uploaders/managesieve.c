@@ -167,6 +167,7 @@ client_authenticate (struct server *s, const char* const user)
     return -1;
   }
   gsasl_finish (session);
+  if (str) g_free (str);
   return 0;
 }
 
@@ -285,7 +286,7 @@ extensions ()
     }
     final_list_sasl[h-1] = '\0';
     g_free (supported_mechs_by_server);
-
+    g_free (temp);
     s->sasl_mech = gsasl_client_suggest_mechanism (sasl, final_list_sasl);
     g_free (final_list_sasl);
     client_authenticate (s, NULL);
@@ -300,6 +301,7 @@ extensions ()
     } else {
       g_string_free (request (s, "UNAUTHENTICATE\r\n"), 1);
     }
+    g_string_free (gstr, 1);
   }
   struct server* s = g_ptr_array_index (servers, 0);
   return s->extensions;
@@ -384,4 +386,5 @@ close_ ()
     g_free(s);
   //}
   g_ptr_array_free(servers, 1);
+  gsasl_done (sasl);
 }
