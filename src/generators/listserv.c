@@ -157,6 +157,7 @@ get_scripts_recursive (struct listserv *l, char* const listname,
 		 "%04d/%02d/%02d %02d:%02d:%02d script upload %s (via %s)\n",
 		 1900 + lt.tm_year, lt.tm_mon + 1, lt.tm_mday,
 		 lt.tm_hour, lt.tm_min, lt.tm_sec, (char*)p1, listname);
+	fflush (file);
 	int k = 0;
 	while (temp2[k]) {
 	  ADD_SCRIPT (temp2[k]);
@@ -220,6 +221,5 @@ unload ()
   g_hash_table_destroy (created_scripts);
   g_hash_table_destroy (list_dependencies);
   listserv_destroy (l);
-  fflush (file);
   fclose (file);
 }
