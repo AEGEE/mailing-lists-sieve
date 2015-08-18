@@ -21,14 +21,14 @@ struct server {
   char *service;
   char *realm;
   char *password;
-  unsigned short port;
   const char* sasl_mech;
+  char** extensions;
+  int socket;
+  unsigned short port;
   char bits; //xxxxxxx0 - unauthenticate not supported
              //xxxxxxx1 - unauthenticate supported
              //xxxxxx0x - connection closed
              //xxxxxx1x - connection opened
-  int socket;
-  char** extensions;
 };
 
 static Gsasl *sasl = NULL;
