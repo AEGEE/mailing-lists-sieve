@@ -10,7 +10,6 @@ AC_CONFIG_MACRO_DIRS([m4])
 # Checks for programs.
 AC_PROG_CC
 AM_PROG_AR
-AM_PROG_CC_C_O
 AC_LIBTOOL_DLOPEN
 LT_INIT([disable-shared, dlopen])
 AC_CHECK_HEADERS_ONCE(signal.h, errno.h, sys/time.h, sys/stat.h, sys/types.h, ltdl.h)
